@@ -345,7 +345,7 @@ class Swagger implements \Serializable
                         'apis' => array()
                     );
                 }
-                $path = '/resources/'.str_replace('/', '-', ltrim($resource->resourcePath, '/')).'.{format}';
+                $path = '/'.str_replace('/', '-', ltrim($resource->resourcePath, '/'));
                 $result['apis'][] = array(
                     'path' => $path,
                     'description' => $resource->apis[0]->description
